@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddub4vqfgsp7o"]
+
+[ext_resource type="PackedScene" uid="uid://kf64j7pluy7o" path="res://interactive_book_2d.tscn" id="1_grtv7"]
+
+[node name="Main" type="Node2D"]
+
+[node name="InteractiveBook2D" parent="." instance=ExtResource("1_grtv7")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="RichTextLabel" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -96.0
+offset_top = -49.0
+offset_right = 96.0
+offset_bottom = -32.0
+theme_override_font_sizes/normal_font_size = 11
+theme_override_font_sizes/bold_font_size = 10
+bbcode_enabled = true
+text = "[center][b]INTERACTIVE BOOK 2D"
+
+[node name="Description" type="RichTextLabel" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -87.0
+offset_top = -19.0
+offset_right = -41.0
+offset_bottom = 32.0
+theme_override_font_sizes/normal_font_size = 4
+bbcode_enabled = true
+text = "Click the left and right sides of the book to flip the pages.
+
+
+
+
+
+
+Use the back arrow to close the book."
+fit_content = true
