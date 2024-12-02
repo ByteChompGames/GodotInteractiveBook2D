@@ -5,6 +5,7 @@ class_name InteractiveBook2D
 
 var current_page : int = 0 # tracks the current page the book is displaying
 
+# - set the book to be closed when the scene is loaded
 func _ready():
 	current_page = 0
 	go_to_page(current_page)
@@ -75,7 +76,6 @@ func go_to_page(page : int):
 			play("previous_page")
 	
 	current_page = page # set current page to the new page
-	print(current_page)
 
 # - recieves signal from NextPageButton
 func _on_next_page_button_button_down():
